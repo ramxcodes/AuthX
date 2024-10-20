@@ -1,4 +1,3 @@
-import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import FloatingShape from './components/FloatingShape'
 import SignupPage from './pages/SignupPage'
