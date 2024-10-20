@@ -2,11 +2,11 @@
   "name": "authx",
   "version": "1.0.0",
   "main": "Backend/server.js",
-"scripts": {
-  "dev": "set NODE_ENV=development&& nodemon Backend/server.js",
-  "start": "NODE_ENV=production&& node backend/server.js",
-  "build": "npm install && npm install --prefix FrontEnd && npm run build --prefix FrontEnd"
-},
+  "scripts": {
+    "dev": "nodemon Backend/server.js", 
+    "start": "NODE_ENV=production && node Backend/server.js",
+    "build": "npm install && npm install --prefix FrontEnd && npm run build --prefix FrontEnd"
+  },
   "keywords": [],
   "author": "",
   "type": "module",
