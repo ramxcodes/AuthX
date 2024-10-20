@@ -59,9 +59,9 @@ It’s a great starting point if you need to set up full authentication for your
    npm install
    ```
 
-4. Install client dependencies (assuming the React frontend is in a `/client` directory):
+4. Install front end dependencies:
    ```bash
-   cd client
+   cd frontend
    npm install
    cd ..
    ```
