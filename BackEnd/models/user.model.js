@@ -1,14 +1,15 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 
+// Define the User schema
 const userSchema = new mongoose.Schema({
-    email:{
+    email: {
         type: String,
         required: true,
-        unique: true
+        unique: true // Ensure unique email for each user
     },
     password: {
         type: String,
-        required: true
+        required: true // Store hashed password
     },
     name: {
         type: String,
@@ -16,17 +17,17 @@ const userSchema = new mongoose.Schema({
     },
     lastLogin: {
         type: Date,
-        default: Date.now
+        default: Date.now // Automatically set the default to current date/time
     },
     isVerified: {
         type: Boolean,
-        default: false
+        default: false // User is unverified by default
     },
-    resetPasswordToken : String,
-    resetPasswordExpiresAt: Date,
-    verificationToken: String,
-    verificationTokenExpiresAt: Date,
+    resetPasswordToken: String, // Token for password reset
+    resetPasswordExpiresAt: Date, // Expiry time for reset token
+    verificationToken: String, // Token for email verification
+    verificationTokenExpiresAt: Date, // Expiry time for verification token
+}, { timestamps: true }); // Automatically manage createdAt and updatedAt fields
 
-},{timestamps : true})
-
-export const User = mongoose.model('User', userSchema)
+// Export the User model
+export const User = mongoose.model('User', userSchema);
